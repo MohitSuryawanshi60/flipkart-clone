@@ -1,0 +1,220 @@
+/* ✅ General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* ✅ Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2874f0; /* Flipkart Blue */
+  padding: 15px 20px;
+  color: white;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-links a,
+.logout-button {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ✅ Hover Effects */
+.navbar-links a:hover,
+.logout-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.logout-button:focus {
+  outline: none;
+}
+
+/* ✅ Banner Section */
+.banner {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.banner img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* ✅ Category Section */
+.categories {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.category-list {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.category-card {
+  background: #f5f5f5;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: bold;
+}
+
+.category-card:hover {
+  background: #ddd;
+}
+
+/* ✅ Products Section */
+.products-section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ✅ Product Grid */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Improved size */
+  gap: 20px;
+  justify-content: center;
+}
+
+/* ✅ Product Card */
+.product-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 280px; /* Better fit */
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ✅ Product Image - Full Image Display */
+.product-card img {
+  width: 100%;
+  height: 250px; /* Proper height */
+  object-fit: contain; /* Ensures full image visibility */
+  border-radius: 8px;
+}
+
+/* ✅ Product Name */
+.product-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* ✅ Product Price */
+.product-price {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+/* ✅ Product Description */
+.product-description {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 10px;
+  text-align: center;
+  height: 40px; /* Fixed height for consistency */
+  overflow: hidden;
+}
+
+/* ✅ Add to Cart Button */
+.product-card button {
+  background-color: #ff9f00;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.product-card button:hover {
+  background-color: #e68900;
+}
+
+/* ✅ Footer */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: #2874f0;
+  color: white;
+  margin-top: 20px;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .product-list {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Adjust for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .banner img {
+    max-height: 250px;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust for smaller screens */
+  }
+
+  .product-card img {
+    height: 200px;
+  }
+}

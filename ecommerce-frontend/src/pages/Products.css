@@ -1,0 +1,227 @@
+/* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Home Container */
+.home-container {
+  width: 100%;
+  max-width: 1300px; /* Increased for better spacing */
+  margin: auto;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2874f0;
+  padding: 15px 20px;
+  color: white;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+
+/* Banner */
+.banner {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.banner img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Categories Section */
+.categories {
+  text-align: center;
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.category-list {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.category-card {
+  background-color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.category-card:hover {
+  background-color: #2874f0;
+  color: white;
+}
+
+/* Products Section */
+.products-section {
+  padding: 20px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* ✅ Fixed Product Grid */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); /* Larger product size */
+  gap: 25px;
+  justify-content: center;
+}
+
+/* ✅ Fixed Product Card */
+.product-card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 320px; /* Increased width */
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ✅ Fixed Product Image */
+.product-image {
+  width: 100%;
+  height: 260px; /* Increased height */
+  object-fit: contain; /* Ensures full image visibility */
+  border-radius: 5px;
+}
+
+/* ✅ Product Name */
+.product-card h3 {
+  font-size: 20px;
+  margin: 12px 0;
+}
+
+/* ✅ Product Price */
+.product-card .product-price {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* ✅ Product Description */
+.product-card .product-description {
+  font-size: 14px;
+  color: #555;
+  margin: 6px 0;
+  height: 45px; /* Fixed height */
+  overflow: hidden;
+}
+
+/* ✅ Add to Cart Button */
+.product-card button {
+  background-color: #ff9f00;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+.product-card button:hover {
+  background-color: #2874f0;
+}
+.add-product-button, .logout-button {
+  background-color: #2874f0;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.add-product-button:hover, .logout-button:hover {
+  background-color: #2874f0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #2874f0;
+  color: white;
+  margin-top: 20px;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .product-list {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .banner img {
+    max-height: 300px;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Adjusted for mobile */
+  }
+
+  .product-image {
+    height: 220px; /* Smaller image size */
+  }
+  
+}
