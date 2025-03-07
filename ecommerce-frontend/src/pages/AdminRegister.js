@@ -33,7 +33,7 @@ const AdminRegister = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/api/admin/register", formData);
+      const res = await axios.post("https://flipkart-cloneb.vercel.app/api/admin/register", formData);
       setSuccess(res.data.message);
       setTimeout(() => navigate("/admin-login"), 2000); // Redirect after success
     } catch (err) {

@@ -22,7 +22,7 @@ const AdminOrders = () => {
       setLoading(true);
       setError(null);
 
-      const response = await fetch("http://localhost:5000/api/orders", {
+      const response = await fetch("https://flipkart-cloneb.vercel.app/api/orders", {
         headers: { Authorization: `Bearer ${adminToken}` },
       });
 

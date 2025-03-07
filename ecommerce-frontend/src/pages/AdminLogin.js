@@ -21,7 +21,7 @@ const AdminLogin = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:5000/api/admin/login", formData);
+      const response = await axios.post("https://flipkart-cloneb.vercel.app/api/admin/login", formData);
 
       if (response.data.token) {
         localStorage.setItem("adminToken", response.data.token); // ✅ Store admin token
